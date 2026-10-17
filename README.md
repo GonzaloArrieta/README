@@ -1,64 +1,54 @@
-# 👋 Hi, I'm Gonzalo Arrieta
+# Hola, soy Gonzalo Arrieta 👋
 
-### AI Automation Engineer | Founder of Velia
+### AI Automation Engineer · Buenos Aires, Argentina
 
-I build AI agents and automation workflows that solve real bottlenecks in B2B operations.
-
----
-
-## 🚀 About Me
-
-- 🤖 **Current focus:** complex automation architectures, LLM integration, and conversational AI agents for channels like WhatsApp.
-- 🏗️ **Founder of [Velia](https://veliapp.com.ar):** a multi-tenant SaaS in production that handles customer service for SMBs via WhatsApp — built end-to-end.
-- 🔍 **My differential:** I come from a QA and Testing background. I don't ship simple "demos" — I apply a tester's mindset to automations: error handling, event deduplication, edge cases, and obsession with production stability.
-- 📬 **Open to:** remote or hybrid roles in Automation, AI Engineering, Technical Operations, or AI Implementation.
+Construyo agentes de IA y automatizaciones para problemas reales de negocio. Antes de la tecnología trabajé 4 años en operaciones: logística, coordinación de equipos, e-commerce y atención al cliente. Sé cómo funciona una operación por dentro antes de proponer qué automatizar.
 
 ---
 
-## 🛠 Tech Stack
+## 🔧 En qué estoy trabajando
 
-### AI & Automation
-`n8n` · `Claude API` · `OpenAI API` · `Groq (Whisper)` · `Prompt Engineering` · `Prompt Injection Defense`
+### [velia-core](https://github.com/GonzaloArrieta/velia-core)
 
-### Backend, Data & APIs
-`Supabase` · `PostgreSQL` · `Row-Level Security` · `REST APIs` · `Evolution API (WhatsApp)` · `Webhooks`
+Núcleo en Python de Velia, un agente de IA para WhatsApp pensado para inmobiliarias.
 
-### Frontend & Deployment
-`Next.js` · `Vercel` · `Git` · `Docker` · `Easypanel`
+- Webhook en **FastAPI** que valida cada mensaje y descarta duplicados con una restricción única en **PostgreSQL**.
+- **Clasificador de consultas** (interesado, cliente o spam) con un **set de evaluación** de 20 casos reales del rubro: acierta 20 de 20.
+- **Tests con pytest**, imagen de **Docker** y **CI en GitHub Actions** que corre todo contra una base temporal en cada push.
 
-### QA & Testing (my foundation)
-`Manual Testing` · `Postman` · `Selenium` · `Cucumber` · `JIRA` · `Python (learning)`
+### [Velia](https://veliapp.com.ar)
 
----
+Empezó como emprendimiento y hoy es mi laboratorio. La primera versión funciona en n8n:
 
-## 🌟 Featured Project
-
-### 🟢 [Velia](https://veliapp.com.ar) — Production SaaS
-
-Multi-tenant WhatsApp AI platform for SMBs. Currently in production.
-
-**What it does:**
-- Handles text, audio, and image messages autonomously
-- Persistent conversational memory per contact
-- Multi-tenant architecture with strict isolation (Row-Level Security)
-- Multi-client dashboard with organization-level access control
-
-**Stack:** n8n · Supabase (PostgreSQL + RLS) · Evolution API · Groq/Whisper · Next.js · Vercel · Easypanel
-
-**Highlights I'm proud of:**
-- Message deduplication by `message_id` to prevent duplicate processing
-- Security remediation across 5 production vulnerabilities with a hostile-review regression battery
-- End-to-end ownership: from architecture to deployment to commercial outreach (126+ prospects managed)
+- Responde texto, audio (transcripción con Whisper) e imágenes por WhatsApp, con memoria de conversación por contacto.
+- Arquitectura multi-tenant con aislamiento por organización (**Row-Level Security** en Supabase).
+- Dashboard por organización en Next.js sobre Vercel.
+- Resolví problemas reales de confiabilidad: mensajes duplicados, cambios de formato de la API de WhatsApp y el retiro de un modelo por parte del proveedor.
+- Revisión de seguridad con corrección de los hallazgos: límites a la entrada del usuario, delimitación de prompts y errores que no exponen información interna.
+- Llevé también la parte comercial: más de 160 inmobiliarias relevadas, 90 contactadas y demos.
 
 ---
 
-## 📫 Get in Touch
+## 🧪 Cómo trabajo
 
-- 🌐 **Website:** [veliapp.com.ar](https://veliapp.com.ar)
-- 💼 **LinkedIn:** [in/pablo-gonzalo-arrieta](https://linkedin.com/in/pablo-gonzalo-arrieta)
-- 📧 **Email:** pablogonzaloarrieta7@gmail.com
-- 📍 **Location:** El Palomar, Buenos Aires, Argentina (UTC-3)
+Vengo de QA. Pienso en casos borde, manejo de errores y en que las cosas funcionen fuera de la demo. Y mido antes de cambiar: si toco un prompt, vuelvo a correr el set de evaluación.
 
 ---
 
-*Currently open to remote AI Automation / Automation Engineer roles across US, EU, and LatAm markets.*
+## 🛠 Stack
+
+**IA:** APIs de Anthropic, OpenAI y Groq · Whisper · prompt engineering · guardrails
+**Backend y datos:** Python · FastAPI · PostgreSQL · Supabase · APIs REST · webhooks · Evolution API
+**Testing:** pytest · Postman · Selenium · Cucumber
+**Infraestructura:** Docker · GitHub Actions · n8n self-hosted · Easypanel · Vercel · Git
+**Frontend:** Next.js
+
+---
+
+## 📫 Contacto
+
+- 💼 [LinkedIn](https://linkedin.com/in/pablo-gonzalo-arrieta)
+- 📧 pablogonzaloarrieta7@gmail.com
+- 📍 Caseros, Buenos Aires (UTC-3)
+
+Busco roles de **AI Automation, Implementation o Solutions Engineer**, híbridos o presenciales en Buenos Aires.
